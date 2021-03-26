@@ -1,10 +1,5 @@
-import styled from 'styled-components'
-
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`
+import { Base } from '../templates/Base'
 
 export default function Home() {
-  return <Title>My page</Title>
+  return <Base>My page</Base>
 }
