@@ -1,3 +1,4 @@
+import { addDecorator } from '@storybook/react'
 import { ThemeProvider } from 'styled-components'
 import { withNextRouter } from 'storybook-addon-next-router'
 import GlobalStyles from 'styles/global'
