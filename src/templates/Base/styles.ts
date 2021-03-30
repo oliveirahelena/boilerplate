@@ -1,31 +1,44 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: space-between;
 `
 
 export const Content = styled.div`
+  flex: 1 0 auto;
+`
+
+export const Footer = styled.footer`
   ${({ theme }) => css`
-    margin-top: ${theme.spacings.xlarge};
-    flex: 1 0 auto;
+    width: 100%;
+    height: 5rem;
+    border-top: 1px solid ${theme.colors.lightGray};
+    background-color: ${theme.colors.lightGray};
   `}
 `
 
-export const SectionFooter = styled.section`
+export const FooterContent = styled.div`
   ${({ theme }) => css`
-    margin-top: ${theme.spacings.large};
-    padding-bottom: ${theme.spacings.xsmall};
-    padding-top: ${theme.spacings.xxlarge};
-    background-color: ${theme.colors.white};
-    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
+    max-width: ${theme.grid.container};
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: calc(5rem - 2px);
 
-    ${media.greaterThan('medium')`
-      padding-top: calc(${theme.spacings.xxlarge} * 2);
-      clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
-    `}
+    a {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-height: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
   `}
 `
